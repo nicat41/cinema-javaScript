@@ -4,6 +4,10 @@
     background-color: #5b5b5b;
     border-radius: 8px;
 }
+.seat:hover {
+  position: relative;
+  bottom: 5px;
+}
 
 .film.active {
     background-color: #66B979;
@@ -13,4 +17,5 @@
     }
     .filled {
       background-color: #eaeaea;
+      pointer-events: none;
     }
