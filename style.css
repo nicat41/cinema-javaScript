@@ -1,0 +1,16 @@
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #5b5b5b;
+    border-radius: 8px;
+}
+
+.film.active {
+    background-color: #66B979;
+    }
+    .selected {
+     background-color: #FF9446;
+    }
+    .filled {
+      background-color: #eaeaea;
+    }

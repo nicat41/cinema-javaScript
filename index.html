@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -28,8 +29,97 @@
         };
       </script>
   </head>
-  <body>
+  <body class="bg-[#222]">
+<div class="w-[570px] mx-auto mt-[40px]">
+  <div class="w-full h-[122px] bg-white rounded-[16px] shadow-[0px_6px_10px_3px_#F8F8F840]"></div>
 
+<div class="grid grid-cols-12 mt-[30px] gap-x-[50px]">
+  <div class="col-span-3 grid grid-cols-2 gird-rows-6 gap-4">
+<button class="seat filled"></button>
+<button class="seat"></button>
+<button class="seat filled"></button>
+<button class="seat "></button>
+<button class="seat"></button>
+<button class="seat"></button>
+<button class="seat"></button>
+<button class="seat"></button>
+<button class="seat"></button>
+<button class="seat  selected"></button>
+<button class="seat"></button>
+<button class="seat"></button>
+
+  </div>
+
+  <div class="col-span-6 grid grid-cols-4 grid-rows-6 gap-4">
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat filled"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+    <button class="seat "></button>
+    <button class="seat"></button>
+    <button class="seat"></button>
+
+      </div>
+
+      <div class="col-span-3 grid grid-cols-2 grid-rows-6 gap-4">
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat "></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+        <button class="seat"></button>
+
+        
+          </div>
+</div>
+<div class="flex mt-[25px] gap-x-[10px]">
+  <button class=" film active bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg ">Film 1</button>
+  <button class=" film  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Film 2</button>
+  <button class=" film  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Film 3</button>
+  <button class=" film  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Film 4</button>
+</div>
+<div class="mt-[30px] text-white bg-black py-[15px] px-[22px] rounded-lg flex">
+
+<div class="flex flex-1 items-center space-x-[12px]">
+  <span class="inline-block  size-[50px] selected rounded-lg"></span>
+  <span>Selected</span>
+</div>
+
+<div class="flex flex-1 items-center space-x-[12px]">
+  <span class="inline-block size-[50px] rounded-lg bg-[#5b5b5b]"></span>
+  <span>Empty</span>
+</div>
+
+<div class="flex flex-1 items-center space-x-[12px]">
+  <span class="inline-block size-[50px] filled rounded-lg"></span>
+  <span>filled</span>
+</div>
+
+</div>
+</div>
     <script src="./script.js"></script>
 </body>
 </html>
