@@ -4,13 +4,11 @@ const container = document.querySelector("#container")
 
 let text = document.querySelector("#text")
 //// hansi kino ve nece bilet aldigimiz ve qiymedini orgenmek ucun  hansi divin icerisinde yazilacaqsa o divi cagiririq
-container.addEventListener("click", (e) => {
-  let element = e.target;
-if (element.classList.contains("seat")) {
-  ///// if in icerinde deyirik ki kilik olunanda goderilen  ikinci deyer ki var e yuxarida onu menimsedmisik element de ve deyirik ki elementdin classlistinde 
-  /// contains metodundan istifade ederek hansi class da saet varsa onu bize versin
-  element.classList.toggle('selected')
-  ///// daha sonra yene eyni qaydada if in icerisdineki class hansinda ki var onun toggle medodundan istifade ederek selected classi elave et hemin class varsada sil deyirik metodan istifade ederek
+
+
+let filmBtns = document.querySelector("#filmBtns")
+
+let calculatePrice = () => {
   let selectedSeats = container.querySelectorAll(".seat.selected").length;
   /////////  burda yuxarida ilk defe aldigimiz buttonlar ki var onlarin  icerisindeki seat clasinin icersindeki selected olan butun class adlarinin 
   ////necesine klik olunubsa onlarin length vasdesi ile uzunlugunu yeni nece eded klik olundugunu aliriq
@@ -23,11 +21,32 @@ if (element.classList.contains("seat")) {
   let totalPrice = parseFloat(filmPrice) * selectedSeats;
   //// burda yuarida ki aldigimiz deyeri burda ilk once strig oldugundan cevirirk number deyerine bize bu deyer filmprice deyerinde icindeki ki deyeri vururuq
   ///// selectedSeats de ki nece eded ki selected ki var ona  
-
-  
-  text.innerHTML = ` ${filmName} adlı kinoya ${selectedSeats} blet seçdiniz, toplam mebleğ ${totalPrice} aze`
+  text.innerHTML = ` ${filmName} adlı kinoya ${selectedSeats} blet seçdiniz, toplam mebleğ ${totalPrice} AZN`
   //// yuxarida cagirdigimiz divi menimsediyimiz text di yaziriq onun innnerhtml ne deyerleri otururuk ilk filname deyeri hnasi film olacaq onun adini demsil  edir 
   //////// ikinci nece dene   selectedSeats  var onun sayini verir bize ve son olaraq totalprice de de bize aldigimiz bletlerin toplam qiyemtini deyir
+}
 
+
+container.addEventListener("click", (e) => {
+  let element = e.target;
+if (element.classList.contains("seat")) {
+  ///// if in icerinde deyirik ki kilik olunanda goderilen  ikinci deyer ki var e yuxarida onu menimsedmisik element de ve deyirik ki elementdin classlistinde 
+  /// contains metodundan istifade ederek hansi class da saet varsa onu bize versin
+  element.classList.toggle('selected')
+  ///// daha sonra yene eyni qaydada if in icerisdineki class hansinda ki var onun toggle medodundan istifade ederek selected classi elave et hemin class varsada sil deyirik metodan istifade ederek
+  calculatePrice()
 }
 })
+
+filmBtns.addEventListener("click", (e) => {
+  if(e.target.matches("button")) {
+    // filmBtns.querySelectorAll(".film").forEach((btn) => btn.classList.remove("active"))
+    for(let btn of filmBtns.querySelectorAll(".film")) {
+      btn.classList.remove("active")
+    }
+    e.target.classList.add("active")
+  }
+  calculatePrice()
+})
+
+calculatePrice()
