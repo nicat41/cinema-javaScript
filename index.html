@@ -30,8 +30,12 @@
       </script>
   </head>
   <body class="bg-[#222]">
-<div class="w-[570px] mx-auto mt-[40px]">
-  <div class="w-full h-[122px] bg-white rounded-[16px] shadow-[0px_6px_10px_3px_#F8F8F840]"></div>
+<div class="w-[570px] mx-auto my-[40px]">
+  <div class="w-full h-[222px] bg-white rounded-[16px] shadow-[0px_6px_10px_3px_#F8F8F840] overflow-hidden">
+    <iframe id="display" class="w-full h-full " src="" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
 <div class="grid grid-cols-12 mt-[30px] gap-x-[50px] " id="container">
   <div class="col-span-3 grid grid-cols-2 gird-rows-6 gap-4">
@@ -95,11 +99,7 @@
         
           </div>
 </div>
-<div class="flex mt-[25px] gap-x-[10px]" id="filmBtns">
-  <button value="15" class=" film active  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Esaretin Bedeli</button>
-  <button value="20" class=" film  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Başlangıç</button>
-  <button value="25" class=" film  bg-[#5b5b5b] w-full h-[50px] text-white rounded-lg">Yeşil Yol</button>
-</div>
+<div class="flex mt-[25px] gap-x-[10px]" id="filmBtns"></div>
 
 <div class="bg-black text-white p-3 mt-5" id="text"></div>
 <div class="mt-[30px] text-white bg-black py-[15px] px-[22px] rounded-lg flex">
